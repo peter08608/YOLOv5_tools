@@ -1,0 +1,5 @@
+train: ../bmp_filtering2/ballDTS/train/images
+val: ../bmp_filtering2/ballDTS/valid/images
+
+nc: 1
+names: ['ball']
