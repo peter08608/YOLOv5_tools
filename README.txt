@@ -1,6 +1,6 @@
 yolov5-master.zip 主程式
 Labelimg 圖片標記(支援yolo格式)
-Dataset_Separate.py 資料分離 train valid test 範例:[5:1:0]
+Dataset_Separate.py 資料分離 train : valid : test 範例:[5:1:0]
 
 Labelimg作標籤，把PascalVOC改為Yolo後即可存成txt形式的label
 
