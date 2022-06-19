@@ -1,34 +1,28 @@
-yolov5-master.zip ¥Dµ{¦¡
-Labelimg ¹Ï¤ù¼Ğ°O(¤ä´©yolo®æ¦¡)
-Dataset_Separate.py ¸ê®Æ¤ÀÂ÷ train valid test ½d¨Ò:[5:1:0]
+yolov5-master.zip ä¸»ç¨‹å¼
+Labelimg åœ–ç‰‡æ¨™è¨˜(æ”¯æ´yoloæ ¼å¼)
+Dataset_Separate.py è³‡æ–™åˆ†é›¢ train valid test ç¯„ä¾‹:[5:1:0]
 
-Labelimg§@¼ĞÅÒ¡A§âPascalVOC§ï¬°Yolo«á§Y¥i¦s¦¨txt§Î¦¡ªºlabel
+Labelimgä½œæ¨™ç±¤ï¼ŒæŠŠPascalVOCæ”¹ç‚ºYoloå¾Œå³å¯å­˜æˆtxtå½¢å¼çš„label
 
-Dataset_Separate.py ¥i§â¤w¼Ğ°O¦nªºimage»Plabel¤ÀÂ÷¬°¦Û­q¤ñ¨Òªº¸ê®Æ§¨¥H²Å¦Xyolov5§Î¦¡
+Dataset_Separate.py å¯æŠŠå·²æ¨™è¨˜å¥½çš„imageèˆ‡labelåˆ†é›¢ç‚ºè‡ªè¨‚æ¯”ä¾‹çš„è³‡æ–™å¤¾ä»¥ç¬¦åˆyolov5å½¢å¼
 
-«ü¥O:
+æŒ‡ä»¤:
 
 Training
-python train.py --img 640 --batch 32 --epochs 1000 --data ./Dataset¥Ü½d/data.yaml --cfg ./models/yolov5s.yaml --weight '' --device 0,1
---img:yolov5±Ä¥Î¦Û¾AÀ³¹Ï¤ù¤Ø¤o½Õ¾ã(¨Ã«D³æ¯ÂÁY©ñ)¡A«ØÄ³³]©w¯à³Q32¾ã°£ªº¼Æ­È
---data:°O±o­×§ïdata.yamlªº³]©w¡Cnc:Ãş§O¼Æ names:Ãş§O
---cfg:¥H¬Æ»òºô¸ô¥h°V½m¡A©x¤è´£¨Ñ s m l x ¡A¤À§O³t«×:§Ö-ºC¡Bºë½T:¤£·Ç-«Ü·Ç
---device:°V½m¸Ë¸m¡A¨Ò:--device 0¡B--device cpu¡B--device 0,1(¥iÂùÅã¥d¹Bºâ)
+python train.py --img 640 --batch 32 --epochs 1000 --data ./Datasetç¤ºç¯„/data.yaml --cfg ./models/yolov5s.yaml --weight '' --device 0,1
+--img:yolov5æ¡ç”¨è‡ªé©æ‡‰åœ–ç‰‡å°ºå¯¸èª¿æ•´(ä¸¦éå–®ç´”ç¸®æ”¾)ï¼Œå»ºè­°è¨­å®šèƒ½è¢«32æ•´é™¤çš„æ•¸å€¼
+--data:è¨˜å¾—ä¿®æ”¹data.yamlçš„è¨­å®šã€‚nc:é¡åˆ¥æ•¸ names:é¡åˆ¥
+--cfg:ä»¥ç”šéº¼ç¶²è·¯å»è¨“ç·´ï¼Œå®˜æ–¹æä¾› s m l x ï¼Œåˆ†åˆ¥é€Ÿåº¦:å¿«-æ…¢ã€ç²¾ç¢º:ä¸æº–-å¾ˆæº–
+--device:è¨“ç·´è£ç½®ï¼Œä¾‹:--device 0ã€--device cpuã€--device 0,1(å¯é›™é¡¯å¡é‹ç®—)
 
 Detect
 python detect.py --source ./sample.jpg --weight ./runs/train/exp/weights/best.pt --device 0,1
---source:¸ê®Æ¸ô®|¡A¤ä´©webcam¡Bimage¡Bvideo¡Bfolderµ¥¡Ahttps://github.com/ultralytics/yolov5
---weights:°V½m§¹¦¨ªºweightÀÉ¡Abest.pt¬°»Pvalid¸ê®Æ§¨¤ñ¹ï«á®ÄªG³Ì¦nªº¡Alast.pt¬°³Ì«á¤@¦¸°V½mªºweight
+--source:è³‡æ–™è·¯å¾‘ï¼Œæ”¯æ´webcamã€imageã€videoã€folderç­‰ï¼Œhttps://github.com/ultralytics/yolov5
+--weights:è¨“ç·´å®Œæˆçš„weightæª”ï¼Œbest.ptç‚ºèˆ‡validè³‡æ–™å¤¾æ¯”å°å¾Œæ•ˆæœæœ€å¥½çš„ï¼Œlast.ptç‚ºæœ€å¾Œä¸€æ¬¡è¨“ç·´çš„weight
 
 Train Custom Data:
-label¸Ìªºtxt¸Ì­±¤À§O¬Oclass x_center y_center width height
-class:Ãş§O
-x_center y_center:¼Ğ°O¤è®Ø¤¤¤ß®y¼Ğ(x,y)¡Ax/­ì¹Ï¼e=x_center¡By/­ì¹Ï°ª=y_center
-width height:¼Ğ°O¤è®Øªº¼e°ª(w,h)¡Aw/­ì¹Ï¼e=width¡Bh/­ì¹Ï°ª=height
+labelè£¡çš„txtè£¡é¢åˆ†åˆ¥æ˜¯class x_center y_center width height
+class:é¡åˆ¥
+x_center y_center:æ¨™è¨˜æ–¹æ¡†ä¸­å¿ƒåº§æ¨™(x,y)ï¼Œx/åŸåœ–å¯¬=x_centerã€y/åŸåœ–é«˜=y_center
+width height:æ¨™è¨˜æ–¹æ¡†çš„å¯¬é«˜(w,h)ï¼Œw/åŸåœ–å¯¬=widthã€h/åŸåœ–é«˜=height
 https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data
-
-python detect.py --source ../pokemon_pattern/image/00009.jpg --weight ../weights/best.pt --device cpu
-
-python detect.py --source ../pokemon_pattern/image/00268.jpg --weight ../weights/best.pt --device cpu --nosave
-
-python detect.py --source ../pokemon_pattern/image --weight ../weights/best.pt --device cpu --nosave
